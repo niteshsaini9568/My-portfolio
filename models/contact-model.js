@@ -1,8 +1,10 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
+require('dotenv').config()
+
 
 async function main() {
-    await mongoose.connect('mongodb://127.0.0.1:27017/Portfolio');
+    await mongoose.connect(process.env.db);
 }
 
 main()

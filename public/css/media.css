@@ -138,6 +138,14 @@
     .stats div p {
         font-size: 0.75rem;
     }
+
+    .bg1 {
+        box-shadow: 0 0 50px 100px rgba(218, 77, 241, 0.4);
+    }
+
+    .bg2 {
+        box-shadow: 0 0 50px 100px rgba(196, 245, 233, 0.9);
+    }
 }
 
 /* Media Query for Tablets (up to 768px) */
@@ -227,6 +235,8 @@
 
     .about-content p {
         font-size: 0.875rem;
+        text-align: left;
+        margin-left: 1rem;
     }
 
     .btn1,
@@ -241,6 +251,11 @@
 
     .btn2 i {
         margin-right: 0.2rem;
+    }
+
+    .about-btn {
+        display: inline-flex;
+        flex-direction: column;
     }
 }
 
@@ -302,6 +317,7 @@
 
     .skill-container {
         flex-direction: column;
+        margin-top: 1rem;
         gap: 0.5rem;
     }
 

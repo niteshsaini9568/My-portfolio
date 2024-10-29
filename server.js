@@ -1,7 +1,6 @@
 const express = require('express');
 const path = require('path');  
 const bodyParser = require('body-parser');
-const ejsMate = require("ejs-mate");
 const mainrouter = require("./routes/mainroute")
 const app = express();
 

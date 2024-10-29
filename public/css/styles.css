@@ -35,15 +35,23 @@ nav {
     list-style: none;
 }
 
+.nav-links ul li a{
+    color: #444;
+}
+
 .link{
     margin: 0 1rem;
     cursor: pointer;
-    transition: all 0.5s linear;
+    transition: all 0.1s linear;
     text-decoration: none;
 }
 
-.link:hover{
-    color: #556070;
+.link:hover {
+    color: #7209b7;
+    padding: 5px 10px;
+    border: 2px solid #d677ff;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
 
 .nav-resume , button {
@@ -133,7 +141,7 @@ nav {
 .hero-a ,.btn1 ,.btn2{
     text-decoration: none;
     padding: 8px 12px;
-    border-radius: 3px;
+    border-radius: 5px;
     font-weight: 400;
     cursor: pointer;
     transition: all 0.5s linear;
@@ -148,9 +156,14 @@ nav {
     transform: scale(1.08);
 }
 
+.about-btn{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
 .stats{
     display: flex;
-    gap: 10px;
+    gap: 20px;
     justify-content: center;
     align-items: center;
     margin: 1rem 3rem 2rem 1rem;
@@ -158,7 +171,7 @@ nav {
 
 .stats div{
     background-color: #EDD8FF;
-    width: 150px;
+    width: 200px;
     height: 80px;
     border-radius: 5px;
     text-align: center;
@@ -189,6 +202,7 @@ nav {
     align-items: center;
     margin: 6rem 8rem;
     padding-right: 2rem;
+    padding-bottom: 2rem;
     background-color: #fff;
     border-radius: 1rem;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
@@ -208,11 +222,11 @@ nav {
 }
 .social {
     display: flex;
-    gap: 1rem;
+    gap: 2rem;
     padding: 0.5rem 1rem;
     position: absolute;
     bottom: 1rem;
-    left: 9rem;
+    left: 7rem;
     background-color: #fbfaff;
     border-radius: 8px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -246,7 +260,7 @@ nav {
 }
 
 .about-content p{
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
     color: #556070;
 }
 
@@ -268,33 +282,39 @@ nav {
     margin-right: 0.5rem;
 }
 
-.skills{
+.skills {
     padding: 3rem 8rem;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
     background-color: #f5f5f5;
-    gap: 3rem;
 }
 
-.skill-container{
+.skill-container {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
+    width: 100%;
+    margin-top: 5rem;
     gap: 10px;
     padding: 1rem;
 }
 
-.skill-content h1{
+.skill-content h1 {
     font-size: 35px;
     color: #132238;
-    margin-bottom: 1rem ;
+    margin-bottom: 1rem;
+    text-align: center;
+    /* Centered for better alignment */
 }
 
-.skill-content p{
+.skill-content p {
     color: #556070;
+    text-align: center;
+    /* Centered for better alignment */
 }
 
+/* Existing styles for skill items remain unchanged */
 .web,
 .coding,
 .devtools,
@@ -304,10 +324,10 @@ nav {
     display: flex;
     align-items: start;
     flex-direction: column;
-    padding: 1rem;
+    padding: 2rem 4rem;
     margin-bottom: 10px;
     box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
-    transition: all 0.5s linear;
+    transition: all 0.2s linear;
     cursor: pointer;
     height: 150px;
     width: 200px;
@@ -316,7 +336,7 @@ nav {
 .web img,
 .coding img,
 .devtools img,
-.team-management img{
+.team-management img {
     background-color: #A53DFF;
     padding: 5px;
     margin-bottom: 10px;
@@ -328,13 +348,14 @@ nav {
 .coding p,
 .devtools p,
 .team-management p {
-   color: #556070;
+    color: #556070;
 }
+
 .web b,
 .coding b,
 .devtools b,
 .team-management b {
-    color:#132238;
+    color: #132238;
 }
 
 .web:hover,
@@ -343,6 +364,8 @@ nav {
 .team-management:hover {
     transform: translateY(-10px);
 }
+
+/* Media Queries remain unchanged */
 
 .projects{
     display: flex;
@@ -647,7 +670,7 @@ nav {
     box-shadow: none;
     padding: 1rem;
     color: #780000;
-    background-color: #ff8fa3;
+    background-color: #ffacbb;
 }
 
 .email-cnfrm img{

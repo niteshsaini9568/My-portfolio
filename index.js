@@ -2,24 +2,17 @@ const express = require('express');
 const path = require('path');  
 const bodyParser = require('body-parser');
 const mainrouter = require("./routes/mainroute");
+const cors = require('cors');
 const app = express();
 
-const allowCors = (req, res, next) => {
-    res.setHeader('Access-Control-Allow-Credentials', true);
-    res.setHeader('Access-Control-Allow-Origin', 'https://portfolio-frontend-peach-one.vercel.app');
-    res.setHeader('Access-Control-Allow-Methods', 'GET,OPTIONS,PATCH,DELETE,POST,PUT');
-    res.setHeader(
-        'Access-Control-Allow-Headers',
-        'X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version'
-    );
-    if (req.method === 'OPTIONS') {
-        res.status(200).end();
-        return;
-    }
-    next(); 
+const corsOptions = {
+    origin: ['https://portfolio-frontend-peach-one.vercel.app', 'https://niteshtechfolio.site'], // Allow both frontend URLs
+    methods: ['GET', 'POST', 'PUT', 'DELETE'], 
+    credentials: true, 
+    allowedHeaders: ['Content-Type', 'Authorization'],
 };
 
-app.use(allowCors);
+app.use(cors(corsOptions));
 
 app.use(express.urlencoded({ extended: true }));
 app.use(bodyParser.json());

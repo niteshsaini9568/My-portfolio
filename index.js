@@ -6,7 +6,7 @@ const cors = require('cors');
 const app = express();
 
 const corsOptions = {
-    origin: ['https://portfolio-frontend-peach-one.vercel.app', 'https://niteshtechfolio.site'], // Allow both frontend URLs
+    origin: ['https://portfolio-frontend-peach-one.vercel.app', 'https://www.niteshtechfolio.site','https://niteshtechfolio.site'], 
     methods: ['GET', 'POST', 'PUT', 'DELETE'], 
     credentials: true, 
     allowedHeaders: ['Content-Type', 'Authorization'],

@@ -5,10 +5,12 @@ const mainrouter = require("./routes/mainroute")
 const app = express();
 const cors = require('cors');
 
+
 const corsOptions = {
     origin: 'https://portfolio-frontend-peach-one.vercel.app/',
-    methods: ['GET', 'POST'],
-    allowedHeaders: ['Content-Type', 'Authorization'],
+    methods: 'GET,POST,PUT,DELETE', 
+    credentials: true, 
+    allowedHeaders: 'Content-Type,Authorization'
   };
   
 app.use(express.urlencoded({ extended: true }));

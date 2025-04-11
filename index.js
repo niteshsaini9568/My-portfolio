@@ -6,7 +6,7 @@ const app = express();
 
 const allowCors = (req, res, next) => {
     res.setHeader('Access-Control-Allow-Credentials', true);
-    res.setHeader('Access-Control-Allow-Origin', 'https://portfolio-frontend-peach-one.vercel.app'); // Replace with your frontend URL
+    res.setHeader('Access-Control-Allow-Origin', 'https://portfolio-frontend-peach-one.vercel.app');
     res.setHeader('Access-Control-Allow-Methods', 'GET,OPTIONS,PATCH,DELETE,POST,PUT');
     res.setHeader(
         'Access-Control-Allow-Headers',
